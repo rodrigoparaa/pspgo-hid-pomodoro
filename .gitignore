@@ -1,0 +1,30 @@
+# ==============================================================================
+# Git Ignore - PSP Go Modern Lab (MandoPSP)
+# ==============================================================================
+
+# macOS metadata & artifacts
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+# PSPDEV Toolchain (SDK local aislado - 400 MB)
+pspdev/
+
+# Intermediate build objects
+*.o
+*.elf
+*.bin
+*.map
+
+# Hardware diagnostic logs
+probe_log.txt
+*.log
+
+# Hardware safety: prevent accidental inclusion of CIPL Flasher (bricks PSP Go)
+**/CIPL_Flasher/**
+
+# Preserve final ready-to-run Homebrew binaries
+!projects/**/EBOOT.PBP
+!projects/**/PARAM.SFO
